@@ -24,6 +24,8 @@ coord_logo = (50,200)
 coord_logo2 = (x_max-250,200)
 coord_phrase = (x_max/2,y_max/2)
 coord_titre = (x_max/2,100)
+taille_flocon = (20,20)
+
 blanc = (255,255,255)
 noir = (0,0,0)
 rose = (237,61,102)
@@ -43,16 +45,37 @@ def tirage(index_lot):
     participants = participants.drop(index_gagnant)
     #data_lots.to_excel("lots.xlsx",index=False)
     #participants.to_excel("participants.xlsx",index=False)
-    return partenaire,lot,gagnant
+    return gagnant
 
-def affiche_tout(fenetre,partenaire,lot,gagnant):
+def affiche_tout(fenetre,univers,partenaire):
     fenetre.fill(blanc)
+    univers.generation()
+    for flocon in univers.population:
+        affiche_flocon(fenetre,flocon)
     affiche_titre(fenetre)
     affiche_logo(fenetre,partenaire)
-    affiche_gagnant(fenetre,partenaire,lot,gagnant)
     affiche_wacs(fenetre)
+    
     pygame.display.flip()
 
+def affiche_tout_gagnant(fenetre,univers,partenaire,lot,gagnant):
+    fenetre.fill(blanc)
+    univers.generation()
+    for flocon in univers.population:
+        affiche_flocon(fenetre,flocon)
+    affiche_titre(fenetre)
+    affiche_logo(fenetre,partenaire)
+    affiche_wacs(fenetre)
+    affiche_gagnant(fenetre,partenaire,lot,gagnant)
+    
+    pygame.display.flip()
+
+def affiche_flocon(fenetre,flocon):
+    image = pygame.image.load("images\\flocon.jpg").convert_alpha()
+    image = pygame.transform.scale(image,taille_flocon)
+    #image.set_colorkey((255,255,255))
+    #pygame.draw.circle(fenetre, bleu_clair,flocon.coord ,10)
+    fenetre.blit(image,flocon.coord)
 
 def affiche_logo(fenetre,partenaire):
     image = pygame.image.load(logo[partenaire]).convert_alpha()
