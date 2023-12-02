@@ -1,36 +1,9 @@
 import pandas as pd
 import random as rd
 import pygame 
-
-logo = {"WACS": "images\\wacs.png",
-        "BDA":"images\\bda.png",
-        "FIR":"images\\fir.png",
-        "Oliver Wyman" :"images\\oliver.png",
-        "Impact": "images\\impact.png",
-        "JCS" : "images\\jcs.png",
-        "RAID": "images\\raid.png",
-        "Viarezo" : "images\\viarezo.png",
-        "BDE" : "images\\bde.jpeg",
-        "BDS" : "images\\bds.png",
-        "Commu's" : "images\\commus.jpg",
-        "PICS" : "images\\pics.jpeg"
-        }
+from constantes_affichages import *
 
 
-#taille_logo = (100,100)
-x_max = 1440
-y_max = 900
-coord_logo = (50,200)
-coord_logo2 = (x_max-250,200)
-coord_phrase = (x_max/2,y_max/2)
-coord_titre = (x_max/2,100)
-taille_flocon = (20,20)
-
-blanc = (255,255,255)
-noir = (0,0,0)
-rose = (237,61,102)
-bleu_clair = (97,228,243)
-bleu_fonce = (13,31,126)
 
 def tirage(index_lot):
     participants = pd.read_excel("participants.xlsx")
@@ -47,7 +20,8 @@ def tirage(index_lot):
     #participants.to_excel("participants.xlsx",index=False)
     return gagnant
 
-def affiche_tout(fenetre,univers,partenaire):
+
+def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub):
     fenetre.fill(blanc)
     univers.generation()
     for flocon in univers.population:
@@ -55,20 +29,61 @@ def affiche_tout(fenetre,univers,partenaire):
     affiche_titre(fenetre)
     affiche_logo(fenetre,partenaire)
     affiche_wacs(fenetre)
-    
+    if pub :
+        affiche_pub(fenetre,partenaire)
+        affiche_phrase_lots(fenetre,partenaire)
+    else :
+        affiche_gagnant(fenetre,partenaire,lot,gagnant)
+        affiche_phrase_gagnant(fenetre,partenaire,lot)
     pygame.display.flip()
 
-def affiche_tout_gagnant(fenetre,univers,partenaire,lot,gagnant):
+def affiche_init(fenetre,univers):
     fenetre.fill(blanc)
     univers.generation()
     for flocon in univers.population:
         affiche_flocon(fenetre,flocon)
     affiche_titre(fenetre)
-    affiche_logo(fenetre,partenaire)
     affiche_wacs(fenetre)
-    affiche_gagnant(fenetre,partenaire,lot,gagnant)
-    
+    affiche_debut(fenetre)
     pygame.display.flip()
+
+
+def affiche_debut(fenetre):
+    font = pygame.font.Font('freesansbold.ttf', 30)
+    text = font.render("Début du tirage au sort", True, bleu_fonce)
+    textRect = text.get_rect()
+    textRect.center = coord_pub
+    fenetre.blit(text, textRect)
+
+def affiche_phrase_gagnant(fenetre,partenaire,lot):
+    font = pygame.font.Font('freesansbold.ttf', 30)
+    text = font.render("L'heureux gagnant " + lot + " offert par "+ partenaire + " est " , True, rose)
+    textRect = text.get_rect()
+    textRect.center = coord_pub
+    fenetre.blit(text, textRect)
+
+def affiche_gagnant(fenetre,partenaire,lot,gagnant):
+    font = pygame.font.Font('freesansbold.ttf', 60)
+    text = font.render(gagnant , True, bleu_fonce)
+    textRect = text.get_rect()
+    textRect.center = coord_gagnant
+    fenetre.blit(text, textRect)
+
+def affiche_pub(fenetre,partenaire):
+    font = pygame.font.Font('freesansbold.ttf', 30)
+    #text = font.render(infos_partenaires[partenaire]["pub"], True, bleu_fonce)
+    text = font.render("PUB", True, bleu_fonce)
+    textRect = text.get_rect()
+    textRect.center = coord_pub
+    fenetre.blit(text, textRect)
+
+def affiche_phrase_lots(fenetre,partenaire):
+    font = pygame.font.Font('freesansbold.ttf', 30)
+    #text = font.render(infos_partenaires[partenaire]["phrases_lots"], True, rose)
+    text = font.render("Lots offerts", True, rose)
+    textRect = text.get_rect()
+    textRect.center = coord_gagnant
+    fenetre.blit(text, textRect)
 
 def affiche_flocon(fenetre,flocon):
     image = pygame.image.load("images\\flocon.jpg").convert_alpha()
@@ -78,7 +93,7 @@ def affiche_flocon(fenetre,flocon):
     fenetre.blit(image,flocon.coord)
 
 def affiche_logo(fenetre,partenaire):
-    image = pygame.image.load(logo[partenaire]).convert_alpha()
+    image = pygame.image.load(infos_partenaires[partenaire]["logo"]).convert_alpha()
     l,h = image.get_size()
     taille_logo = (200,(200*h)/l)
     image = pygame.transform.scale(image,taille_logo)
@@ -87,12 +102,7 @@ def affiche_logo(fenetre,partenaire):
     fenetre.blit(image,coord_logo2)
 
 
-def affiche_gagnant(fenetre,partenaire,lot,gagnant):
-    font = pygame.font.Font('freesansbold.ttf', 30)
-    text = font.render("L'heureux gagnant " + lot + " offert par "+ partenaire + " est " + gagnant , True, rose)
-    textRect = text.get_rect()
-    textRect.center = coord_phrase
-    fenetre.blit(text, textRect)
+
 
 def affiche_titre(fenetre):
     font = pygame.font.Font('freesansbold.ttf', 90)

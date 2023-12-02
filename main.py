@@ -15,26 +15,54 @@ pygame.init()
 info = pygame.display.Info()
 fenetre = pygame.display.set_mode((x_max, y_max))
 continuer = True
-statut = True
-index_lot = 0
+action = True
+pub = True
+tirage = False
+index_lot = -1
+index_partenaire=-1
+lot = ""
+decompte_lots = 0
 fenetre.fill(blanc)
 affiche_titre(fenetre)
 affiche_wacs(fenetre)
 pygame.display.flip()
+clock = pygame.time.Clock() 
+gagnant = "snow"
 
 while continuer and index_lot<nombre_lots:
     for event in pygame.event.get():
         if event.type== QUIT:
             continuer = False
-        elif event.type == KEYDOWN and event.key == K_SPACE and statut:
-            lot = lots[index_lot]
-            partenaire = data_lots.partenaire[index_lot]
-            gagnant = tirage(index_lot)
-            affiche_tout_gagnant(fenetre,uni,partenaire,lot,gagnant)
+        
+        elif event.type == KEYDOWN and event.key == K_SPACE and action and not pub and tirage:
             index_lot = index_lot +1
-        else:
-            partenaire = data_lots.partenaire[index_lot] 
-            affiche_tout(fenetre,uni,partenaire)
+            partenaire = data_lots.partenaire[index_lot]
+            decompte_lots = infos_partenaires[partenaire]["nombre_lots"] -1
+            lot = lots[index_lot]
+            gagnant = tirage(index_lot)
+            affiche_tout(fenetre,uni,partenaire,lot,gagnant,pub)
+            if decompte_lots==0:
+                tirage = False
+            action= not action
+
+        elif event.type == KEYDOWN and event.key == K_SPACE and action and pub:
+            index_partenaire +=1
+            partenaire = ordre[index_partenaire]
+            affiche_tout(fenetre,uni,partenaire,lot,gagnant,pub)
+            action = not action
+
+        elif event.type == KEYDOWN and event.key == K_SPACE and not action and tirage:
+            action = not action
+        
+        elif event.type == KEYDOWN and event.key == K_SPACE and not action:
+
+
+        elif index_partenaire == -1:
+            affiche_init(fenetre,uni)
+
+        else: 
+            affiche_tout(fenetre,uni,partenaire,lot,gagnant,pub)
+    clock.tick(15)
 
 
     

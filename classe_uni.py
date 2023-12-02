@@ -25,10 +25,13 @@ class Univers:
             flocon = Flocon((x,20))
             self.population.append(flocon)
     def neige(self):
+        cimetiere = []
         for i in range(len(self.population)):
             flocon = self.population[i]
             if not flocon.tomber():
-                self.population.pop[i]
+                cimetiere.append(i)
+        for i in cimetiere:
+            self.population.pop(i)
 
     def generation(self):
         self.heure = self.heure +1
