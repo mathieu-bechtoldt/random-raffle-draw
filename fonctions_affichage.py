@@ -26,26 +26,29 @@ def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub):
     univers.generation()
     for flocon in univers.population:
         affiche_flocon(fenetre,flocon)
-    affiche_titre(fenetre)
+    affiche_banniere(fenetre)
     affiche_logo(fenetre,partenaire)
     affiche_wacs(fenetre)
     if pub :
         affiche_pub(fenetre,partenaire)
         affiche_phrase_lots(fenetre,partenaire)
     else :
-        affiche_gagnant(fenetre,partenaire,lot,gagnant)
+        affiche_gagnant(fenetre,gagnant)
         affiche_phrase_gagnant(fenetre,partenaire,lot)
     pygame.display.flip()
 
 def affiche_init(fenetre,univers):
     fenetre.fill(blanc)
     univers.generation()
+    
     for flocon in univers.population:
         affiche_flocon(fenetre,flocon)
-    affiche_titre(fenetre)
+    #affiche_banniere(fenetre)
+    affiche_affiche(fenetre)
     affiche_wacs(fenetre)
-    affiche_debut(fenetre)
+    #affiche_debut(fenetre)
     pygame.display.flip()
+
 
 
 def affiche_debut(fenetre):
@@ -56,13 +59,13 @@ def affiche_debut(fenetre):
     fenetre.blit(text, textRect)
 
 def affiche_phrase_gagnant(fenetre,partenaire,lot):
-    font = pygame.font.Font('freesansbold.ttf', 30)
+    font = pygame.font.Font('freesansbold.ttf', 40)
     text = font.render("L'heureux gagnant " + lot + " offert par "+ partenaire + " est " , True, rose)
     textRect = text.get_rect()
     textRect.center = coord_pub
     fenetre.blit(text, textRect)
 
-def affiche_gagnant(fenetre,partenaire,lot,gagnant):
+def affiche_gagnant(fenetre,gagnant):
     font = pygame.font.Font('freesansbold.ttf', 60)
     text = font.render(gagnant , True, bleu_fonce)
     textRect = text.get_rect()
@@ -102,8 +105,7 @@ def affiche_logo(fenetre,partenaire):
     fenetre.blit(image,coord_logo2)
 
 
-
-
+"""
 def affiche_titre(fenetre):
     font = pygame.font.Font('freesansbold.ttf', 90)
     text = font.render("Tombola" , True, rose)
@@ -111,8 +113,26 @@ def affiche_titre(fenetre):
     textRect.center = coord_titre
     fenetre.blit(text, textRect)
 
+"""
+def affiche_banniere(fenetre):
+    image = pygame.image.load("images\\Bannière.png").convert_alpha()
+    l,h = image.get_size()
+    taille_logo = (700,(700*h)/l)
+    l , h = taille_logo
+    image = pygame.transform.scale(image,taille_logo)
+    fenetre.blit(image,(x_max/2-l/2,10))
+
+
+
 def affiche_wacs(fenetre):
     image = pygame.image.load("images\\wacs2.jpeg").convert_alpha()
-    fenetre.blit(image,(10,y_max-200))
-    fenetre.blit(image,(x_max-200,y_max-200))
+    fenetre.blit(image,(60,y_max-250))
+    fenetre.blit(image,(x_max-250,y_max-250))
 
+def affiche_affiche(fenetre):
+    image = pygame.image.load("images\\affiche.jpg").convert_alpha()
+    l,h = image.get_size()
+    taille_logo = (635,(635*h)/l)
+    l , h = taille_logo
+    image = pygame.transform.scale(image,taille_logo)
+    fenetre.blit(image,(x_max/2-l/2,0))

@@ -1,3 +1,19 @@
+#taille_logo = (100,100)
+x_max = 1440
+y_max = 900
+coord_logo = (50,200)
+coord_logo2 = (x_max-250,200)
+coord_gagnant = (x_max/2,3*y_max/5)
+coord_pub = (x_max/2,y_max/2)
+coord_titre = (x_max/2,100)
+taille_flocon = (20,20)
+
+blanc = (255,255,255)
+noir = (0,0,0)
+rose = (237,61,102)
+bleu_clair = (97,228,243)
+bleu_fonce = (13,31,126)
+
 infos_partenaires = {
     "BDA": {
         "logo" : "images\\bda.png",
@@ -81,18 +97,3 @@ infos_partenaires = {
 ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Viarezo","JCS","WACS","Oliver Wyman"]
 
 
-#taille_logo = (100,100)
-x_max = 1440
-y_max = 900
-coord_logo = (50,200)
-coord_logo2 = (x_max-250,200)
-coord_gagnant = (x_max/2,3*y_max/5)
-coord_pub = (x_max/2,2*y_max/5)
-coord_titre = (x_max/2,100)
-taille_flocon = (20,20)
-
-blanc = (255,255,255)
-noir = (0,0,0)
-rose = (237,61,102)
-bleu_clair = (97,228,243)
-bleu_fonce = (13,31,126)
