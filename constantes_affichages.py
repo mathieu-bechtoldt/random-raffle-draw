@@ -14,17 +14,33 @@ rose = (237,61,102)
 bleu_clair = (97,228,243)
 bleu_fonce = (13,31,126)
 
+
+ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Viarezo","JCS","WACS","Oliver Wyman"]
+
+images_lots = {
+    1 : ["images\\colere.jpeg",150],
+    2 : ["images\\chienne.jpeg", 150],
+    3 : ["images\\artifice.jpeg", 150],
+    4 : ["images\\sac.jpg",300],
+    5 : ["images\\sac.jpg",300],
+    6 : ["images\\sac.jpg",300],
+}
+
+
+
+
 infos_partenaires = {
     "BDA": {
         "logo" : "images\\bda.png",
         "pub" : "venez dessiner",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie Le BDA qui offre 3 livres :",
+        "images_lots" : "images\\lots_bda.png",
         "nombre_lots" : 3,
+        "t_lots" : 400
     },
     "FIR": {
         "logo" : "images\\raid.png",
-        "pub" : "venez dessiner",
+        "pub" : "",
         "phrases_lots" : "",
         "images_lots" : "",
         "nombre_lots" : 1,
@@ -67,9 +83,10 @@ infos_partenaires = {
     "BDE" : {
         "logo" : "images\\bde.jpeg",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie le BDE qui offre 3 sacs de sport promo",
+        "images_lots" : "images\\sac.jpg",
         "nombre_lots" : 3,
+        "t_lots" : 300
     },
     "BDS" : {
         "logo" : "images\\bds.png",
@@ -93,7 +110,4 @@ infos_partenaires = {
         "nombre_lots" : 1,
     }
 }
-
-ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Viarezo","JCS","WACS","Oliver Wyman"]
-
 

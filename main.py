@@ -40,8 +40,6 @@ while continuer and index_lot<nombre_lots:
             if decompte_lots==0:
                 pub = True
             
-            
-
         elif event.type == KEYDOWN and event.key == K_SPACE and pub:
             index_partenaire +=1
             partenaire = ordre[index_partenaire]
@@ -52,7 +50,7 @@ while continuer and index_lot<nombre_lots:
     if index_partenaire == -1:
         affiche_init(fenetre,uni)
     else:
-        affiche_tout(fenetre,uni,partenaire,lot,gagnant,affichage_pub)
+        affiche_tout(fenetre,uni,partenaire,lot,gagnant,affichage_pub,index_lot)
     clock.tick(10)
 
 
