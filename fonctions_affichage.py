@@ -1,7 +1,9 @@
 import pandas as pd
 import random as rd
 import pygame 
+import math
 from constantes_affichages import *
+from classe_uni import *
 
 
 
@@ -23,9 +25,11 @@ def tirage(index_lot):
 
 def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub,index_lot):
     fenetre.fill(blanc)
-    univers.generation()
-    for flocon in univers.population:
-        affiche_flocon(fenetre,flocon)
+    for x in univers.population:
+        if isinstance(x,Flocon):
+            affiche_flocon(fenetre,x)
+        elif isinstance(x,Confetti):
+            affiche_confetti(fenetre,x)
     affiche_banniere(fenetre)
     affiche_logo(fenetre,partenaire)
     affiche_wacs(fenetre)
@@ -40,11 +44,12 @@ def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub,index_lot):
     pygame.display.flip()
 
 def affiche_init(fenetre,univers):
-    fenetre.fill(blanc)
-    univers.generation()
-    
-    for flocon in univers.population:
-        affiche_flocon(fenetre,flocon)
+    fenetre.fill(blanc)    
+    for x in univers.population:
+        if isinstance(x,Flocon):
+            affiche_flocon(fenetre,x)
+        elif isinstance(x,Confetti):
+            affiche_confetti(fenetre,x)
     #affiche_banniere(fenetre)
     affiche_affiche(fenetre)
     affiche_wacs(fenetre)
@@ -117,6 +122,17 @@ def affiche_flocon(fenetre,flocon):
     #image.set_colorkey((255,255,255))
     #pygame.draw.circle(fenetre, bleu_clair,flocon.coord ,10)
     fenetre.blit(image,flocon.coord)
+
+def affiche_confetti(fenetre,confetti):
+    x,y = confetti.coord
+    angle = math.radians(confetti.direction)
+    rectangle_surface = pygame.Surface((10, 20), pygame.SRCALPHA)
+    pygame.draw.rect(rectangle_surface, confetti.couleur, (0, 0, 10, 20))
+    rectangle_surface_rotated = pygame.transform.rotate(rectangle_surface, angle)
+    rectangle_rotated_rect = rectangle_surface_rotated.get_rect(center=(x, y))
+    fenetre.blit(rectangle_surface_rotated, rectangle_rotated_rect.topleft)
+
+
 
 def affiche_logo(fenetre,partenaire):
     image = pygame.image.load(infos_partenaires[partenaire]["logo"]).convert_alpha()

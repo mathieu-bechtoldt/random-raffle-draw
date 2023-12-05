@@ -13,6 +13,10 @@ noir = (0,0,0)
 rose = (237,61,102)
 bleu_clair = (97,228,243)
 bleu_fonce = (13,31,126)
+couleurs = { "rouge": (255,0,0),
+           "vert" : (0,255,0),
+           "bleu" : (0,0,255)
+           }
 
 
 ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Viarezo","JCS","WACS","Oliver Wyman"]

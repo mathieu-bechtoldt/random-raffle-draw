@@ -35,8 +35,10 @@ while continuer and index_lot<nombre_lots:
             partenaire = ordre[index_partenaire]
             lot = lots[index_lot]
             decompte_lots -=1
+            uni.explosion(coord_gagnant,50)
             gagnant = tirage(index_lot)
             affichage_pub = False
+
             if decompte_lots==0:
                 pub = True
             
@@ -48,8 +50,10 @@ while continuer and index_lot<nombre_lots:
             pub = not pub
         
     if index_partenaire == -1:
+        uni.generation()
         affiche_init(fenetre,uni)
     else:
+        uni.generation()
         affiche_tout(fenetre,uni,partenaire,lot,gagnant,affichage_pub,index_lot)
     clock.tick(10)
 
