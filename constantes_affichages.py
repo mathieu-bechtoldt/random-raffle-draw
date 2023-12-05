@@ -24,6 +24,39 @@ images_lots = {
     4 : ["images\\sac.jpg",300],
     5 : ["images\\sac.jpg",300],
     6 : ["images\\sac.jpg",300],
+    7 : ["images\\erreur.png",300],
+    8 : ["images\\erreur.png",300],
+    9 : ["images\\erreur.png",300],
+    10 : ["images\\choco.jpg",300],
+    11 : ["images\\nnd.jpg",300],
+    12 : ["images\\commuss.jpg",300],
+    13: ["images\\toss.jpg",300],
+    14 : ["images\\erreur.png",300],
+    15 : ["images\\lotrezo.png",300],
+    16 : ["images\\champ.jpg",300],
+    17 : ["images\\bonnet.webp",300],
+    18 : ["images\\champ.jpg",300],
+    19 : ["images\\erreur.png",300],
+    20 : ["images\\erreur.png",300],
+    21 : ["images\\erreur.png",300],
+    22 : ["images\\erreur.png",300],
+    23 : ["images\\erreur.png",300],
+    24 : ["images\\erreur.png",300],
+    25 : ["images\\erreur.png",300],
+    26 : ["images\\erreur.png",300],
+    27 : ["images\\erreur.png",300],
+    28 : ["images\\erreur.png",300],
+    29 : ["images\\erreur.png",300],
+    30 : ["images\\masque.png",300],
+    31 : ["images\\fondue.jpg",300],
+    32 : ["images\\raclette.jpg",300],
+    33 : ["images\\Golden ticket.png",300],
+    34 : ["images\\Golden ticket.png",300],
+    
+    
+
+
+    
 }
 
 
@@ -39,46 +72,52 @@ infos_partenaires = {
         "t_lots" : 400
     },
     "FIR": {
-        "logo" : "images\\raid.png",
+        "logo" : "images\\fir.png",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie le FIR qui offre des chocolats Nepal et un panier pépin !",
+        "images_lots" : "images\\choco.jpg",
         "nombre_lots" : 1,
+        "t_lots" : 400
     },
     "Oliver Wyman" :{
         "logo" : "images\\oliver.png",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie Oliver Wyman qui offre 2 tickets d'or !!!",
+        "images_lots" : "images\\Golden ticket.png",
         "nombre_lots" : 2,
+        "t_lots" : 400
     },
     "Impact": {
         "logo" : "images\\impact.png",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie Impact qui offre 3 bons pépins de 5€",
+        "images_lots" : "images\\erreur.png",
         "nombre_lots" : 3,
+        "t_lots" : 400
     },
     "JCS" :{
         "logo" : "images\\jcs.png",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On mercie la JCS qui offre une magnifique bouteille de champagne !",
+        "images_lots" : "images\\champ.jpg",
         "nombre_lots" : 1,
+        "t_lots" : 400
     } ,
     "RAID":{
         "logo" : "images\\raid.png",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie le RAID qui offre 2 places pour le NND",
+        "images_lots" : "images\\nnd.jpg",
         "nombre_lots" : 1,
+        "t_lots" : 400
     } ,
     "Viarezo" : {
         "logo" : "images\\viarezo.png",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie Viarezo qui offre le choix entre un casque audio et un abonnement réseau annuel !",
+        "images_lots" : "images\\lotrezo.png",
         "nombre_lots" : 1,
+        "t_lots" : 400
     },
     "BDE" : {
         "logo" : "images\\bde.jpeg",
@@ -91,23 +130,26 @@ infos_partenaires = {
     "BDS" : {
         "logo" : "images\\bds.png",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remerice le BDS qui offre 2 places au TOSS",
+        "images_lots" : "images\\toss.jpg",
         "nombre_lots" : 1,
+        "t_lots" : 400
     },
     "Commu's" : {
         "logo" : "images\\commus.jpg",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "On remercie la COMMU'S qui offre 2 places pour leur spectacle",
+        "images_lots" : "images\\commuss.jpg",
         "nombre_lots" : 1,
+        "t_lots" : 400
     },
     "PICS" :{
         "logo" : "images\\pics.jpeg",
         "pub" : "",
-        "phrases_lots" : "",
-        "images_lots" : "",
+        "phrases_lots" : "ON remercie PICS qui offre 5 impressions photo A5 !",
+        "images_lots" : "images\\erreur.png",
         "nombre_lots" : 1,
+        "t_lots" : 400
     }
 }
 
