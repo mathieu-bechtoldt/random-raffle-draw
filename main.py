@@ -6,7 +6,7 @@ from classe_uni import *
 
 data_lots = pd.read_excel("lots.xlsx")
 lots = data_lots.lots
-nombre_lots = len(lots)
+nombre_lots = len(images_lots)
 x_max = 1440
 y_max = 900
 

@@ -27,15 +27,15 @@ images_lots = {
     7 : ["images\\erreur.png",300],
     8 : ["images\\erreur.png",300],
     9 : ["images\\erreur.png",300],
-    10 : ["images\\choco.jpg",300],
-    11 : ["images\\nnd.jpg",300],
-    12 : ["images\\commuss.jpg",300],
-    13: ["images\\toss.jpg",300],
-    14 : ["images\\erreur.png",300],
-    15 : ["images\\lotrezo.png",300],
-    16 : ["images\\champ.jpg",300],
+    10 : ["images\\choco.jpg",400],
+    11 : ["images\\nnd.jpg",400],
+    12 : ["images\\commuss.jpg",400],
+    13: ["images\\toss.jpg",400],
+    14 : ["images\\erreur.png",400],
+    15 : ["images\\lotrezo.png",400],
+    16 : ["images\\champ.jpg",400],
     17 : ["images\\bonnet.webp",300],
-    18 : ["images\\champ.jpg",300],
+    18 : ["images\\erreur.png",300],
     19 : ["images\\erreur.png",300],
     20 : ["images\\erreur.png",300],
     21 : ["images\\erreur.png",300],
@@ -45,13 +45,11 @@ images_lots = {
     25 : ["images\\erreur.png",300],
     26 : ["images\\erreur.png",300],
     27 : ["images\\erreur.png",300],
-    28 : ["images\\erreur.png",300],
-    29 : ["images\\erreur.png",300],
-    30 : ["images\\masque.png",300],
-    31 : ["images\\fondue.jpg",300],
-    32 : ["images\\raclette.jpg",300],
-    33 : ["images\\Golden ticket.png",300],
-    34 : ["images\\Golden ticket.png",300],
+    28 : ["images\\masque.png",300],
+    29 : ["images\\fondue.jpg",300],
+    30 : ["images\\raclette.jpg",300],
+    31 : ["images\\Golden ticket.png",300],
+    32 : ["images\\Golden ticket.png",300],
     
     
 
@@ -93,7 +91,7 @@ infos_partenaires = {
         "phrases_lots" : "On remercie Impact qui offre 3 bons pépins de 5€",
         "images_lots" : "images\\erreur.png",
         "nombre_lots" : 3,
-        "t_lots" : 400
+        "t_lots" : 300
     },
     "JCS" :{
         "logo" : "images\\jcs.png",
@@ -101,7 +99,7 @@ infos_partenaires = {
         "phrases_lots" : "On mercie la JCS qui offre une magnifique bouteille de champagne !",
         "images_lots" : "images\\champ.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 400
+        "t_lots" : 350
     } ,
     "RAID":{
         "logo" : "images\\raid.png",
@@ -149,7 +147,15 @@ infos_partenaires = {
         "phrases_lots" : "ON remercie PICS qui offre 5 impressions photo A5 !",
         "images_lots" : "images\\erreur.png",
         "nombre_lots" : 1,
-        "t_lots" : 400
+        "t_lots" : 300
+    },
+    "WACS" :{
+        "logo" : "images\\wacs.png",
+        "pub" : "",
+        "phrases_lots" : "La WACS vous offre de multiples cadeaux !!",
+        "images_lots" : "images\\lots_wacs.jpg",
+        "nombre_lots" : 14,
+        "t_lots" : 500
     }
 }
 

@@ -82,7 +82,7 @@ def affiche_lot(fenetre,index_lot):
     taille_logo = (f,y)
     image = pygame.transform.scale(image,taille_logo)
     #image.set_colorkey((255,255,255))
-    fenetre.blit(image,(x_max/2-f/2,900-y-20))
+    fenetre.blit(image,(x_max/2-f/2,900-y-30))
 
 def affiche_pub(fenetre,partenaire):
     font = pygame.font.Font('freesansbold.ttf', 30)
@@ -140,7 +140,7 @@ def affiche_titre(fenetre):
 def affiche_banniere(fenetre):
     image = pygame.image.load("images\\Bannière.png").convert_alpha()
     l,h = image.get_size()
-    taille_logo = (700,(700*h)/l)
+    taille_logo = (600,(600*h)/l)
     l , h = taille_logo
     image = pygame.transform.scale(image,taille_logo)
     fenetre.blit(image,(x_max/2-l/2,10))

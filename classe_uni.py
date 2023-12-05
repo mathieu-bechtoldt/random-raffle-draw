@@ -39,3 +39,8 @@ class Univers:
             self.generate_flocon(5)
         self.neige()
 
+class Confetti:
+    def __init__(self,coord,couleur):
+        self.coord = coord
+        self.couleur = couleur
+
