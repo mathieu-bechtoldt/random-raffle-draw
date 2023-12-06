@@ -25,7 +25,8 @@ def tirage(index_lot):
 
 def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub,index_lot):
     fenetre.fill(blanc)
-    for x in univers.population:
+    for id in univers.population:
+        x = univers.population[id]
         if isinstance(x,Flocon):
             affiche_flocon(fenetre,x)
         elif isinstance(x,Confetti):
@@ -45,7 +46,8 @@ def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub,index_lot):
 
 def affiche_init(fenetre,univers):
     fenetre.fill(blanc)    
-    for x in univers.population:
+    for id in univers.population:
+        x = univers.population[id]
         if isinstance(x,Flocon):
             affiche_flocon(fenetre,x)
         elif isinstance(x,Confetti):
@@ -125,12 +127,14 @@ def affiche_flocon(fenetre,flocon):
 
 def affiche_confetti(fenetre,confetti):
     x,y = confetti.coord
-    angle = math.radians(confetti.direction)
-    rectangle_surface = pygame.Surface((10, 20), pygame.SRCALPHA)
-    pygame.draw.rect(rectangle_surface, confetti.couleur, (0, 0, 10, 20))
-    rectangle_surface_rotated = pygame.transform.rotate(rectangle_surface, angle)
-    rectangle_rotated_rect = rectangle_surface_rotated.get_rect(center=(x, y))
-    fenetre.blit(rectangle_surface_rotated, rectangle_rotated_rect.topleft)
+    angle = confetti.inclinaison
+    angle = math.radians(angle)
+    l , h  = rd.randint(3,8), rd.randint(15,25)
+    pygame.draw.line(fenetre,confetti.couleur,(x,y),(x+cos(angle)*h,y+h*sin(angle)),l)
+    #surface = pygame.Surface((100,100))
+    #pygame.draw.rect(surface, confetti.couleur, (50, 50, l, h))
+    #surface = pygame.transform.rotate(surface, angle)
+    #fenetre.blit(surface, (x,y))
 
 
 

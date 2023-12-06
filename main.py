@@ -10,11 +10,12 @@ nombre_lots = len(images_lots)
 x_max = 1440
 y_max = 900
 
-uni = Univers([],0)
-pygame.init()
+uni = Univers({},0)
+pygame.init() 
 info = pygame.display.Info()
 fenetre = pygame.display.set_mode((x_max, y_max))
 continuer = True
+confettis = 0
 pub = True
 affichage_pub = False
 index_lot = 0
@@ -35,7 +36,8 @@ while continuer and index_lot<nombre_lots:
             partenaire = ordre[index_partenaire]
             lot = lots[index_lot]
             decompte_lots -=1
-            uni.explosion(coord_gagnant,50)
+            #uni.explosion(coord_gagnant,50)
+            confettis = 5
             gagnant = tirage(index_lot)
             affichage_pub = False
 
@@ -54,6 +56,9 @@ while continuer and index_lot<nombre_lots:
         affiche_init(fenetre,uni)
     else:
         uni.generation()
+        if confettis >0:
+            if uni.explosion(coord_gagnant,20,20,50):
+                confettis -=1
         affiche_tout(fenetre,uni,partenaire,lot,gagnant,affichage_pub,index_lot)
     clock.tick(10)
 
