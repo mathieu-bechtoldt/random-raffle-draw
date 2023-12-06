@@ -19,7 +19,7 @@ couleurs = { "rouge": (255,0,0),
            }
 
 
-ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Viarezo","JCS","WACS","Oliver Wyman"]
+ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Miam Local","Viarezo","JCS","WACS","Oliver Wyman"]
 
 images_lots = {
     1 : ["images\\colere.jpeg",150],
@@ -28,18 +28,18 @@ images_lots = {
     4 : ["images\\sac.jpg",300],
     5 : ["images\\sac.jpg",300],
     6 : ["images\\sac.jpg",300],
-    7 : ["images\\erreur.png",300],
-    8 : ["images\\erreur.png",300],
-    9 : ["images\\erreur.png",300],
-    10 : ["images\\choco.jpg",400],
-    11 : ["images\\nnd.jpg",400],
-    12 : ["images\\commuss.jpg",400],
-    13: ["images\\toss.jpg",400],
-    14 : ["images\\erreur.png",400],
-    15 : ["images\\lotrezo.png",400],
-    16 : ["images\\champ.jpg",400],
-    17 : ["images\\bonnet.webp",300],
-    18 : ["images\\erreur.png",300],
+    7 : ["images\\pepin.png",300],
+    8 : ["images\\pepin.png",300],
+    9 : ["images\\pepin.png",300],
+    10 : ["images\\choco.jpg",500],
+    11 : ["images\\nnd.jpg",450],
+    12 : ["images\\commuss.jpg",450],
+    13: ["images\\toss.jpg",450],
+    14 : ["images\\pics_stand.jpg",400],
+    15 : ["images\\miam.jpg",400],
+    16 : ["images\\lotrezo.png",400],
+    17 : ["images\\champ.jpg",400],
+    18 : ["images\\bonnet.webp",300],
     19 : ["images\\erreur.png",300],
     20 : ["images\\erreur.png",300],
     21 : ["images\\erreur.png",300],
@@ -49,11 +49,12 @@ images_lots = {
     25 : ["images\\erreur.png",300],
     26 : ["images\\erreur.png",300],
     27 : ["images\\erreur.png",300],
-    28 : ["images\\masque.png",300],
-    29 : ["images\\fondue.jpg",300],
-    30 : ["images\\raclette.jpg",300],
-    31 : ["images\\Golden ticket.png",300],
-    32 : ["images\\Golden ticket.png",300],
+    28 : ["images\\erreur.png",300],
+    29 : ["images\\masque.png",300],
+    30 : ["images\\fondue.jpg",400],
+    31 : ["images\\raclette.jpg",400],
+    32 : ["images\\Golden ticket.png",400],
+    33 : ["images\\Golden ticket.png",400],
     
     
 
@@ -67,11 +68,11 @@ images_lots = {
 infos_partenaires = {
     "BDA": {
         "logo" : "images\\bda.png",
-        "pub" : "venez dessiner",
-        "phrases_lots" : "On remercie Le BDA qui offre 3 livres :",
+        "pub" : "",
+        "phrases_lots" : "On remercie Le BDA qui offre 3 livres !",
         "images_lots" : "images\\lots_bda.png",
         "nombre_lots" : 3,
-        "t_lots" : 400
+        "t_lots" : 500
     },
     "FIR": {
         "logo" : "images\\fir.png",
@@ -79,7 +80,7 @@ infos_partenaires = {
         "phrases_lots" : "On remercie le FIR qui offre des chocolats Nepal et un panier pépin !",
         "images_lots" : "images\\choco.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 400
+        "t_lots" : 500
     },
     "Oliver Wyman" :{
         "logo" : "images\\oliver.png",
@@ -92,8 +93,8 @@ infos_partenaires = {
     "Impact": {
         "logo" : "images\\impact.png",
         "pub" : "",
-        "phrases_lots" : "On remercie Impact qui offre 3 bons pépins de 5€",
-        "images_lots" : "images\\erreur.png",
+        "phrases_lots" : "On remercie Impact qui offre 3 bons pépin de 5€ !",
+        "images_lots" : "images\\pepin.png",
         "nombre_lots" : 3,
         "t_lots" : 300
     },
@@ -103,20 +104,20 @@ infos_partenaires = {
         "phrases_lots" : "On mercie la JCS qui offre une magnifique bouteille de champagne !",
         "images_lots" : "images\\champ.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 350
+        "t_lots" : 400
     } ,
     "RAID":{
         "logo" : "images\\raid.png",
         "pub" : "",
-        "phrases_lots" : "On remercie le RAID qui offre 2 places pour le NND",
+        "phrases_lots" : "On remercie le RAID qui offre 2 places pour le NND !",
         "images_lots" : "images\\nnd.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 400
+        "t_lots" : 500
     } ,
     "Viarezo" : {
         "logo" : "images\\viarezo.png",
         "pub" : "",
-        "phrases_lots" : "On remercie Viarezo qui offre le choix entre un casque audio et un abonnement réseau annuel !",
+        "phrases_lots" : "On remercie Viarezo qui offre un casque audio ou un abonnement réseau!",
         "images_lots" : "images\\lotrezo.png",
         "nombre_lots" : 1,
         "t_lots" : 400
@@ -124,7 +125,7 @@ infos_partenaires = {
     "BDE" : {
         "logo" : "images\\bde.jpeg",
         "pub" : "",
-        "phrases_lots" : "On remercie le BDE qui offre 3 sacs de sport promo",
+        "phrases_lots" : "On remercie le BDE qui offre 3 sacs de sport promo !",
         "images_lots" : "images\\sac.jpg",
         "nombre_lots" : 3,
         "t_lots" : 300
@@ -132,26 +133,26 @@ infos_partenaires = {
     "BDS" : {
         "logo" : "images\\bds.png",
         "pub" : "",
-        "phrases_lots" : "On remerice le BDS qui offre 2 places au TOSS",
+        "phrases_lots" : "On remerice le BDS qui offre 2 places au TOSS !",
         "images_lots" : "images\\toss.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 400
+        "t_lots" : 500
     },
     "Commu's" : {
         "logo" : "images\\commus.jpg",
         "pub" : "",
-        "phrases_lots" : "On remercie la COMMU'S qui offre 2 places pour leur spectacle",
+        "phrases_lots" : "On remercie la COMMU'S qui offre 2 places pour leur spectacle !",
         "images_lots" : "images\\commuss.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 400
+        "t_lots" : 500
     },
     "PICS" :{
         "logo" : "images\\pics.jpeg",
         "pub" : "",
         "phrases_lots" : "ON remercie PICS qui offre 5 impressions photo A5 !",
-        "images_lots" : "images\\erreur.png",
+        "images_lots" : "images\\photos.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 300
+        "t_lots" : 400
     },
     "WACS" :{
         "logo" : "images\\wacs.png",
@@ -160,6 +161,14 @@ infos_partenaires = {
         "images_lots" : "images\\lots_wacs.jpg",
         "nombre_lots" : 14,
         "t_lots" : 500
-    }
+    },
+    "Miam Local":{
+        "logo" : "images\\logo_miam.png",
+        "pub" : "",
+        "phrases_lots" : "On remrecie la Miam Local qui offre un panier en collab avec la WACS ",
+        "images_lots" : "images\\miam.jpg",
+        "nombre_lots" : 1,
+        "t_lots" : 500
+    },
 }
 

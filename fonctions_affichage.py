@@ -111,7 +111,7 @@ def affiche_phrase_lots(fenetre,partenaire):
     text = font.render(infos_partenaires[partenaire]["phrases_lots"], True, rose)
     #text = font.render("Lots offerts", True, rose)
     textRect = text.get_rect()
-    textRect.center = coord_gagnant
+    textRect.center = coord_pub
     fenetre.blit(text, textRect)
 
 def affiche_lots(fenetre,partenaire):

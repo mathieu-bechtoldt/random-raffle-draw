@@ -49,7 +49,7 @@ while continuer and index_lot<nombre_lots:
             partenaire = ordre[index_partenaire]
             decompte_lots = infos_partenaires[partenaire]["nombre_lots"]
             affichage_pub = True
-            pub = not pub
+            pub = False
 
         elif event.type == KEYDOWN and event.key == K_LEFT :
             if pub :
@@ -59,15 +59,35 @@ while continuer and index_lot<nombre_lots:
                     gagnant = tirage(index_lot)
                     lot = lots[index_lot]
                     affichage_pub = False
+                    decompte_lots+=1
                 else:
                     affichage_pub = True
+                    gagnant = tirage(index_lot)
+                    lot = lots[index_lot]
+                    decompte_lots+=1
             else:
-                pub = True
-                index_partenaire-=1
-                partenaire = ordre[index_partenaire]
-                affichage_pub = False
+                n = infos_partenaires[partenaire]["nombre_lots"]
+                if affichage_pub :
+                    index_partenaire-=1
+                    pub = True
+                    affichage_pub = False
+                    partenaire = ordre[index_partenaire]
+                    decompte_lots = 0
+                
+                elif (n-decompte_lots)==1:
+                    index_lot -=1
+                    decompte_lots+=1
+                    affichage_pub = True
+                    lot = lots[index_lot]
+                    gagnant = tirage(index_lot)
+                else :
+                    index_lot -=1
+                    lot = lots[index_lot]
+                    gagnant = tirage(index_lot)
+                    decompte_lots +=1
+                    affichage_pub = False
 
-        
+
     if index_partenaire == -1:
         uni.generation()
         affiche_init(fenetre,uni)
