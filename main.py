@@ -50,6 +50,23 @@ while continuer and index_lot<nombre_lots:
             decompte_lots = infos_partenaires[partenaire]["nombre_lots"]
             affichage_pub = True
             pub = not pub
+
+        elif event.type == KEYDOWN and event.key == K_LEFT :
+            if pub :
+                pub = False
+                index_lot-=1
+                if infos_partenaires[partenaire]["nombre_lots"]>1:
+                    gagnant = tirage(index_lot)
+                    lot = lots[index_lot]
+                    affichage_pub = False
+                else:
+                    affichage_pub = True
+            else:
+                pub = True
+                index_partenaire-=1
+                partenaire = ordre[index_partenaire]
+                affichage_pub = False
+
         
     if index_partenaire == -1:
         uni.generation()

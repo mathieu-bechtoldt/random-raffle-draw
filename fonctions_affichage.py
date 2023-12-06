@@ -6,21 +6,27 @@ from constantes_affichages import *
 from classe_uni import *
 
 
+participants = pd.read_excel("participants.xlsx")
+data_lots = pd.read_excel("lots.xlsx")
+
 
 def tirage(index_lot):
     participants = pd.read_excel("participants.xlsx")
     data_lots = pd.read_excel("lots.xlsx")
-    lot = data_lots.lots[index_lot]
-    partenaire = data_lots.partenaire[index_lot]  
-    noms = participants.noms
-    nombre_participants = len(noms)
-    index_gagnant= rd.randint(0,nombre_participants-1)
-    gagnant = participants.noms[index_gagnant]
-    data_lots.at[index_lot,"gagnants"] = gagnant
-    participants = participants.drop(index_gagnant)
-    #data_lots.to_excel("lots.xlsx",index=False)
-    #participants.to_excel("participants.xlsx",index=False)
-    return gagnant
+    if data_lots.at[index_lot,"gagnants"]=="personne":
+        lot = data_lots.lots[index_lot]
+        partenaire = data_lots.partenaire[index_lot]  
+        noms = participants.noms
+        nombre_participants = len(noms)
+        index_gagnant= rd.randint(0,nombre_participants-1)
+        gagnant = participants.noms[index_gagnant]
+        data_lots.at[index_lot,"gagnants"] = gagnant
+        participants = participants.drop(index_gagnant)
+        #data_lots.to_excel("lots.xlsx",index=False)
+        #participants.to_excel("participants.xlsx",index=False)
+        return gagnant
+    else:
+        return data_lots.at[index_lot,"gagnants"]
 
 
 def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub,index_lot):
