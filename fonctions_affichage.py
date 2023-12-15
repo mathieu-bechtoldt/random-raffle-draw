@@ -6,24 +6,30 @@ from constantes_affichages import *
 from classe_uni import *
 
 
-participants = pd.read_excel("participants.xlsx")
+tickets = pd.read_excel("tickets.xlsx")
 data_lots = pd.read_excel("lots.xlsx")
 
 
 def tirage(index_lot):
-    participants = pd.read_excel("participants.xlsx")
+    tickets = pd.read_excel("tickets.xlsx")
     data_lots = pd.read_excel("lots.xlsx")
     if data_lots.at[index_lot,"gagnants"]=="personne":
         lot = data_lots.lots[index_lot]
         partenaire = data_lots.partenaire[index_lot]  
-        noms = participants.noms
+        noms = tickets.noms
         nombre_participants = len(noms)
         index_gagnant= rd.randint(0,nombre_participants-1)
-        gagnant = participants.noms[index_gagnant]
+        gagnant = tickets.noms[index_gagnant]
+        prenom = tickets.prenoms[index_gagnant]
+        mail = tickets.mail[index_gagnant]
+        telephone = tickets.telephone[index_gagnant]
         data_lots.at[index_lot,"gagnants"] = gagnant
-        participants = participants.drop(index_gagnant)
-        #data_lots.to_excel("lots.xlsx",index=False)
-        #participants.to_excel("participants.xlsx",index=False)
+        data_lots.at[index_lot,"prenoms"] = prenom
+        data_lots.at[index_lot,"mail"] = mail
+        data_lots.at[index_lot,"telephone"] = telephone
+        tickets = tickets.drop(index_gagnant)
+        data_lots.to_excel("lots.xlsx",index=False)
+        tickets.to_excel("tickets.xlsx",index=False)
         return gagnant
     else:
         return data_lots.at[index_lot,"gagnants"]
