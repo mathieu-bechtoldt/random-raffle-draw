@@ -32,6 +32,12 @@ def compte_tickets():
                 prenoms.append(Prenom[i])
                 mails.append(Mail[i])
                 telephone.append(Telephone[i])
+        elif prix == 3:
+            for knecht in range(2):
+                noms.append(Nom[i])
+                prenoms.append(Prenom[i])
+                mails.append(Mail[i])
+                telephone.append(Telephone[i])
         else:
             prix = int(prix)
             for knecht in range((prix%10)*15):

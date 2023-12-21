@@ -19,7 +19,7 @@ couleurs = { "rouge": (255,0,0),
            }
 
 
-ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Miam Local","Viarezo","JCS","WACS","Oliver Wyman"]
+ordre = ["BDA","BDE","Impact","Impact","FIR","RAID","Commu's","BDS","PICS","Institut Carlance","Macdonald","BrassandCo","Lagiraf","Miam Local","Viarezo","JCS","WACS","Oliver Wyman"]
 
 images_lots = {
     1 : ["images\\colere.jpeg",150],
@@ -36,29 +36,41 @@ images_lots = {
     12 : ["images\\commuss.jpg",450],
     13: ["images\\toss.jpg",450],
     14 : ["images\\pics_stand.jpg",400],
-    15 : ["images\\miam.jpg",400],
-    16 : ["images\\lotrezo.png",400],
-    17 : ["images\\champ.jpg",400],
-    18 : ["images\\bonnet.webp",300],
-    19 : ["images\\erreur.png",300],
-    20 : ["images\\erreur.png",300],
-    21 : ["images\\erreur.png",300],
-    22 : ["images\\erreur.png",300],
-    23 : ["images\\erreur.png",300],
-    24 : ["images\\erreur.png",300],
-    25 : ["images\\erreur.png",300],
-    26 : ["images\\erreur.png",300],
-    27 : ["images\\erreur.png",300],
-    28 : ["images\\erreur.png",300],
-    29 : ["images\\masque.png",300],
-    30 : ["images\\fondue.jpg",400],
-    31 : ["images\\raclette.jpg",400],
-    32 : ["images\\Golden ticket.png",400],
-    33 : ["images\\Golden ticket.png",400],
+    15 : ["images\\massage.png",400],
+    16 : ["images\\massage.png",400],
+    17 : ["images\\massage.png",400],
+    18 : ["images\\massage.png",400],
+    19 : ["images\\coca.jpeg",400],
+    20 : ["images\\coca.jpeg",400],
+    21 : ["images\\coca.jpeg",400],
+    22 : ["images\\coca.jpeg",400],
+    23 : ["images\\cadeaux.jpeg",400],
+    24 : ["images\\brass.png",400],
+    25 : ["images\\brass.png",400],
+    26 : ["images\\brass.png",400],
+    27 : ["images\\cadeaux.jpg",400],
+    28 : ["images\\cadeaux.jpg",400],
+    29 : ["images\\cadeaux.jpg",400],
+    30 : ["images\\miam.jpg",400],
+    31 : ["images\\lotrezo.png",400],
+    32 : ["images\\champ.jpg",400],
+    33 : ["images\\bonnet.webp",300],
+    34 : ["images\\erreur.png",300],
+    35 : ["images\\erreur.png",300],
+    36 : ["images\\erreur.png",300],
+    37 : ["images\\erreur.png",300],
+    38 : ["images\\erreur.png",300],
+    39 : ["images\\erreur.png",300],
+    40 : ["images\\erreur.png",300],
+    41 : ["images\\erreur.png",300],
+    42 : ["images\\erreur.png",300],
+    43 : ["images\\erreur.png",300],
+    44 : ["images\\masque.png",300],
+    45 : ["images\\fondue.jpg",400],
+    46 : ["images\\raclette.jpg",400],
+    47 : ["images\\Golden ticket.png",400],
+    48 : ["images\\Golden ticket.png",400],
     
-    
-
-
     
 }
 
