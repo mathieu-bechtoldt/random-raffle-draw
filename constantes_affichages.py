@@ -19,7 +19,9 @@ couleurs = { "rouge": (255,0,0),
            }
 
 
-ordre = ["BDA","BDE","Impact","Impact","FIR","RAID","Commu's","BDS","PICS","Institut Carlance","Macdonald","BrassandCo","Lagiraf","Miam Local","Viarezo","JCS","WACS","Oliver Wyman"]
+ordre = ["BDA","BDE","Impact","FIR","RAID","Commu's","BDS","PICS","Institut Carlance","Macdonald","BrassandCo","Lagiraf","Miam Locale","Viarezo","JCS","WACS","Oliver Wyman"]
+
+lots_cs= [11,13,34,35,36,37,38,39,40,41,42,43,47,48]
 
 images_lots = {
     1 : ["images\\colere.jpeg",150],
@@ -29,47 +31,45 @@ images_lots = {
     5 : ["images\\sac.jpg",300],
     6 : ["images\\sac.jpg",300],
     7 : ["images\\pepin.png",300],
-    8 : ["images\\pepin.png",300],
-    9 : ["images\\pepin.png",300],
-    10 : ["images\\choco.jpg",500],
-    11 : ["images\\nnd.jpg",450],
-    12 : ["images\\commuss.jpg",450],
-    13: ["images\\toss.jpg",450],
-    14 : ["images\\pics_stand.jpg",400],
-    15 : ["images\\massage.png",400],
-    16 : ["images\\massage.png",400],
-    17 : ["images\\massage.png",400],
-    18 : ["images\\massage.png",400],
+    8 : ["images\\choco.jpg",500],
+    9 : ["images\\nnd.jpg",450],
+    10 : ["images\\commuss.jpg",450],
+    11: ["images\\toss.jpg",450],
+    12 : ["images\\pics_stand.jpg",400],
+    13 : ["images\\massage.png",150],
+    14 : ["images\\massage.png",150],
+    15: ["images\\massage.png",150],
+    16 : ["images\\massage.png",150],
+    17 : ["images\\coca.jpeg",400],
+    18 : ["images\\coca.jpeg",400],
     19 : ["images\\coca.jpeg",400],
     20 : ["images\\coca.jpeg",400],
-    21 : ["images\\coca.jpeg",400],
-    22 : ["images\\coca.jpeg",400],
-    23 : ["images\\cadeaux.jpeg",400],
-    24 : ["images\\brass.png",400],
-    25 : ["images\\brass.png",400],
-    26 : ["images\\brass.png",400],
+    21 : ["images\\cadeaux.jpg",400],
+    22 : ["images\\brass.png",300],
+    23 : ["images\\brass.png",300],
+    24 : ["images\\brass.png",300],
+    25 : ["images\\cadeaux.jpg",400],
+    26 : ["images\\cadeaux.jpg",400],
     27 : ["images\\cadeaux.jpg",400],
-    28 : ["images\\cadeaux.jpg",400],
-    29 : ["images\\cadeaux.jpg",400],
-    30 : ["images\\miam.jpg",400],
-    31 : ["images\\lotrezo.png",400],
-    32 : ["images\\champ.jpg",400],
-    33 : ["images\\bonnet.webp",300],
-    34 : ["images\\erreur.png",300],
-    35 : ["images\\erreur.png",300],
-    36 : ["images\\erreur.png",300],
-    37 : ["images\\erreur.png",300],
-    38 : ["images\\erreur.png",300],
-    39 : ["images\\erreur.png",300],
-    40 : ["images\\erreur.png",300],
-    41 : ["images\\erreur.png",300],
-    42 : ["images\\erreur.png",300],
-    43 : ["images\\erreur.png",300],
-    44 : ["images\\masque.png",300],
-    45 : ["images\\fondue.jpg",400],
-    46 : ["images\\raclette.jpg",400],
-    47 : ["images\\Golden ticket.png",400],
-    48 : ["images\\Golden ticket.png",400],
+    28 : ["images\\miam.jpg",100],
+    29 : ["images\\lotrezo.png",400],
+    30 : ["images\\champ.jpg",400],
+    31 : ["images\\bonnet.webp",300],
+    32 : ["images\\pistus.png",300],
+    33 : ["images\\pistus.png",300],
+    34 : ["images\\pistus.png",300],
+    35 : ["images\\pistus.png",300],
+    36 : ["images\\pistus.png",300],
+    37 : ["images\\pistus.png",300],
+    38 : ["images\\pistus.png",300],
+    39: ["images\\pistus.png",300],
+    40 : ["images\\pistus.png",300],
+    41 : ["images\\pistus.png",300],
+    42 : ["images\\masque.png",300],
+    43 : ["images\\fondue.jpg",400],
+    44 : ["images\\raclette.jpg",400],
+    45 : ["images\\Golden ticket.png",400],
+    46 : ["images\\Golden ticket.png",400],
     
     
 }
@@ -89,7 +89,7 @@ infos_partenaires = {
     "FIR": {
         "logo" : "images\\fir.png",
         "pub" : "",
-        "phrases_lots" : "On remercie le FIR qui offre des chocolats Nepal et un panier pépin !",
+        "phrases_lots" : "On remercie le FIR qui offre des chocolats de Noël !",
         "images_lots" : "images\\choco.jpg",
         "nombre_lots" : 1,
         "t_lots" : 500
@@ -107,7 +107,7 @@ infos_partenaires = {
         "pub" : "",
         "phrases_lots" : "On remercie Impact qui offre 3 bons pépin de 5€ !",
         "images_lots" : "images\\pepin.png",
-        "nombre_lots" : 3,
+        "nombre_lots" : 1,
         "t_lots" : 300
     },
     "JCS" :{
@@ -174,13 +174,47 @@ infos_partenaires = {
         "nombre_lots" : 14,
         "t_lots" : 500
     },
-    "Miam Local":{
+    "Miam Locale":{
         "logo" : "images\\logo_miam.png",
         "pub" : "",
         "phrases_lots" : "On remrecie la Miam Local qui offre un panier en collab avec la WACS ",
         "images_lots" : "images\\miam.jpg",
         "nombre_lots" : 1,
+        "t_lots" : 100
+    },
+    "Lagiraf":{
+        "logo" : "images\\giraf.png",
+        "pub" : "",
+        "phrases_lots" : "On remrecie Lagiraf qui offre des livres ",
+        "images_lots" : "images\\cadeaux.jpg",
+        "nombre_lots" : 3,
         "t_lots" : 500
     },
+    "Macdonald":{
+        "logo" : "images\\macdo.png",
+        "pub" : "",
+        "phrases_lots" : "On remrecie le Macdo qui offre des verres Coca ",
+        "images_lots" : "images\\coca.jpeg",
+        "nombre_lots" : 5,
+        "t_lots" : 500
+    },
+    "BrassandCo":{
+        "logo" : "images\\brass.png",
+        "pub" : "",
+        "phrases_lots" : "On remercie BrassandCo qui offre des bons de réductions ",
+        "images_lots" : "images\\brass.png",
+        "nombre_lots" : 3,
+        "t_lots" : 300
+    },
+    "Institut Carlance":{
+        "logo" : "images\\carlance.jpg",
+        "pub" : "",
+        "phrases_lots" : "On remercie l'institut Carlance qui offre 4 massages ",
+        "images_lots" : "images\\massage.png",
+        "nombre_lots" : 4,
+        "t_lots" : 200
+    },
+
+
 }
 

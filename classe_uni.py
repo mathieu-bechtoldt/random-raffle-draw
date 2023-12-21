@@ -43,7 +43,7 @@ class Univers:
     def generate_confettis(self,coord):
         direction = rd.randint(0,360)
         inclinaison = rd.randint(0,360)
-        vie = rd.randint(8,25)
+        vie = rd.randint(3,10)
         couleur = couleurs_bis[rd.randint(0,2)]
         return Confetti(coord,couleur,direction,inclinaison,vie)
 

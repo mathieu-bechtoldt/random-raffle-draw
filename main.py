@@ -26,7 +26,7 @@ decompte_lots = 0
 clock = pygame.time.Clock() 
 gagnant = "snow"
 
-while continuer and index_lot<nombre_lots:
+while continuer :
     for event in pygame.event.get():
         if event.type== QUIT:
             continuer = False
@@ -39,6 +39,7 @@ while continuer and index_lot<nombre_lots:
             #uni.explosion(coord_gagnant,50)
             confettis = 5
             gagnant = tirage(index_lot)
+            
             affichage_pub = False
 
             if decompte_lots==0:
