@@ -51,7 +51,7 @@ images_lots = {
     25 : ["images\\cadeaux.jpg",400],
     26 : ["images\\cadeaux.jpg",400],
     27 : ["images\\cadeaux.jpg",400],
-    28 : ["images\\miam.jpg",100],
+    28 : ["images\\miam.jpg",150],
     29 : ["images\\lotrezo.png",400],
     30 : ["images\\champ.jpg",400],
     31 : ["images\\bonnet.webp",300],
@@ -180,7 +180,7 @@ infos_partenaires = {
         "phrases_lots" : "On remrecie la Miam Local qui offre un panier en collab avec la WACS ",
         "images_lots" : "images\\miam.jpg",
         "nombre_lots" : 1,
-        "t_lots" : 100
+        "t_lots" : 150
     },
     "Lagiraf":{
         "logo" : "images\\giraf.png",
