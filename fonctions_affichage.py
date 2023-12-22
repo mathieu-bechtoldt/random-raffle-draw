@@ -33,10 +33,11 @@ def tirage(index_lot):
         tickets = tickets.drop(index_gagnant)
         data_lots.to_excel("lots.xlsx",index=False)
         tickets.to_excel("tickets.xlsx",index=False)
-        print(type(gagnant))
-        return gagnant
+        return str(prenom) + " " + str(gagnant)
     else:
-         return data_lots.at[index_lot,"gagnants"]
+        p = str(data_lots.at[index_lot,"prenoms"])
+        n = str(data_lots.at[index_lot,"gagnants"])
+        return p + " " + n
 
 def affiche_tout(fenetre,univers,partenaire,lot,gagnant,pub,index_lot):
     fenetre.fill(blanc)
